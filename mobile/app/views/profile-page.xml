@@ -1,0 +1,27 @@
+<Page navigatingTo="onNavigatingTo" class="page">
+  <ActionBar title="Profil" class="action-bar" />
+
+  <StackLayout class="profile-container" spacing="15">
+
+    <!-- Loader -->
+    <ActivityIndicator busy="{{ isLoading }}" class="loader" />
+
+    <!-- Section profil -->
+    <Label text="Nom complet :" class="label-title" />
+    <Label text="{{ full_name }}" class="label-value" />
+
+    <Label text="Email :" class="label-title" />
+    <Label text="{{ email }}" class="label-value" />
+
+    <!-- Bouton déconnexion -->
+    <Button text="Se déconnecter"
+            tap="{{ onLogout }}"
+            class="btn btn-logout" />
+
+    <!-- Message d'erreur -->
+    <Label text="{{ error }}"
+           textWrap="true"
+           class="error-message" />
+
+  </StackLayout>
+</Page>

@@ -1,0 +1,27 @@
+<Page navigatingTo="onNavigatingTo" class="page">
+  <ActionBar title="Connexion" class="action-bar" />
+
+  <StackLayout class="form-container" spacing="15" padding="20">
+
+    <!-- Email -->
+    <TextField hint="Email" text="{{ email }}" keyboardType="email" class="input-field" />
+
+    <!-- Mot de passe -->
+    <TextField hint="Mot de passe" text="{{ password }}" secure="true" class="input-field" />
+
+    <!-- Bouton Connexion -->
+    <Button text="Se connecter"
+            tap="{{ onLogin }}"
+            isEnabled="{{ !isLoading }}"
+            class="btn btn-login" />
+
+    <!-- Message d'erreur -->
+    <Label text="{{ error }}" class="error-message" textWrap="true" />
+
+    <!-- Bouton vers Inscription -->
+    <Button text="Créer un compte"
+            tap="{{ goToRegister }}"
+            class="btn btn-register" />
+
+  </StackLayout>
+</Page>

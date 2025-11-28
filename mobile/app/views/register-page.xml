@@ -1,0 +1,40 @@
+<Page navigatingTo="onNavigatingTo" class="page">
+  <ActionBar title="Créer un compte" class="action-bar" />
+
+  <StackLayout class="form-container" spacing="15" padding="20">
+
+    <!-- Nom complet -->
+    <TextField hint="Nom complet"
+               text="{{ fullName }}"
+               class="input-field" />
+
+    <!-- Email -->
+    <TextField hint="Email"
+               text="{{ email }}"
+               keyboardType="email"
+               class="input-field" />
+
+    <!-- Mot de passe -->
+    <TextField hint="Mot de passe"
+               secure="true"
+               text="{{ password }}"
+               class="input-field" />
+
+    <!-- Bouton créer compte -->
+    <Button text="S'inscrire"
+            tap="{{ onRegister }}"
+            isEnabled="{{ !isLoading }}"
+            class="btn btn-register" />
+
+    <!-- Message d'erreur -->
+    <Label text="{{ error }}"
+           class="error-message"
+           textWrap="true" />
+
+    <!-- Aller vers login -->
+    <Button text="Déjà un compte ? Se connecter"
+            tap="{{ goToLogin }}"
+            class="btn btn-login-secondary" />
+
+  </StackLayout>
+</Page>
