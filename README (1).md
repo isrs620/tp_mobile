@@ -1,5 +1,8 @@
 🔷 1. Aperçu du projet
-
+membres du groupe:
+israe soundes charef
+youssef bssat
+hicham el mallouki
 Ce projet démontre une chaîne d’authentification complète :
 
 Application Mobile NativeScript
@@ -100,15 +103,15 @@ Exemple — Register
 POST /auth/register
 {
   "email": "test@example.com",
-  "password": "password123",
-  "full_name": "John Doe"
+  "password": "12345678",
+  "full_name": "Jack rousseau"
 }
 
 Exemple — Login
 POST /auth/login
 {
-  "email": "test@example.com",
-  "password": "password123"
+  "email": "user1@example.com",
+  "password": "12345678"
 }
 
 
